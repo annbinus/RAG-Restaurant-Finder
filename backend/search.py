@@ -46,6 +46,7 @@ def search(query, city="", min_stars=None, top_k=TOP_K):
             "review_count": m.metadata.get("review_count"),
             "categories": m.metadata.get("categories"),
             "score": round(m.score, 4),
+            "doc": m.metadata.get("doc", ""),
         }
         for m in results.matches
     ]
